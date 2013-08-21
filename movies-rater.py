@@ -33,15 +33,15 @@ for movie in movies:
 			unrated_movies.append(movie)
 	except ValueError:
 		unrated_movies.append(movie)
-		print "API response was invalid for movie: %s" % movie
+		print u"API response was invalid for movie: %s" % movie
 	except KeyError:
 		unrated_movies.append(movie)
-		print "API response had no rating for movie: %s" % movie
+		print u"API response had no rating for movie: %s" % movie
 print "\n#############################"
 print "Rated Movies: %s \n" % len(rated_movies)
 sorted_rated_movies = sorted(rated_movies.iteritems(), key=operator.itemgetter(1), reverse=True)
 for rm in sorted_rated_movies:
-	print rm
+	print rm[0] + " : " + str(rm[1])
 
 print "\n#############################"
 print "Unrated Movies: %s \n" % len(unrated_movies)
