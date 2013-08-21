@@ -13,7 +13,6 @@ The movies-rater uses the Apache 2 license.  See LICENSE for details.
 $python movies-rater.py /home/arefaey/movies
 
 == Dependencies
-Dependencies
 
 os
 httplib2
