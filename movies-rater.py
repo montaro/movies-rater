@@ -45,7 +45,7 @@ endpoint = "http://www.omdbapi.com/?%s"
 h = Http()
 for movie in movies:
     try:
-        # import ipdb; ipdb.set_trace()
+        movie = movie.decode('utf-8')
         movie = fix_name(movie)
         params = urllib.urlencode({'t': movie})
         response, content = h.request(endpoint % params, "GET")
